@@ -10,6 +10,10 @@ const BlogSchema = new Schema({
     type: String,
     required: true
   },
+  author:{
+    type: String,
+    required: true
+  },
   UserEmail:{
     type: String,
     required: true
