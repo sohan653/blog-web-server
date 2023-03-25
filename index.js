@@ -14,7 +14,11 @@ const cors =require('cors');
 
 // Database Lib Import
 const mongoose =require('mongoose');
-
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "https://calm-lebkuchen-a5bb61.netlify.app");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
 // Security Middleware Implement
 app.use(cors());
 app.use(helmet());
